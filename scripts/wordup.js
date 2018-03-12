@@ -55,11 +55,11 @@ function addNewWordSubmission(word) {
     // replace the hardcoded 'false' with the real answer
     
     var alreadyUsed = false;
-    for (var submission in model.wordSubmissions) {
+    model.wordSubmissions.forEach(function (submission) {
         if (submission.word === word) {
             alreadyUsed = true;
         }
-    }
+    });
     console.log(alreadyUsed)
     
     // if the word is valid and hasn't already been used, add it
